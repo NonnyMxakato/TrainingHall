@@ -4,7 +4,7 @@
 
 table 70000 "Building Table GOS"
 {
-    DataClassification = CustomerContent;
+    //DataClassification = CustomerContent;
     fields
     {
         field(1; "Location"; code[20])
@@ -16,6 +16,7 @@ table 70000 "Building Table GOS"
         field(2; "Code"; code[20])
         {
             caption = 'Code';
+            TableRelation = Location;
         }
         field(3; "Name"; Text[50])
         {
