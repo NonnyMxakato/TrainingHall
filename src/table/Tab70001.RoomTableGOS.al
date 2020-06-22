@@ -9,18 +9,18 @@ table 70001 "Room Table GOS"
         field(1; "Location Code"; code[10])
         {
             caption = 'Location Code';
-            TableRelation = Location;
+            TableRelation = "Building Table GOS".Location where(Location = field("Location Code"));
         }
         field(2; "Building Code"; code[20])
         {
             Caption = 'Building Code';
-            TableRelation = "Building Table GOS".code where("Code" = field("Building Code"));
+            TableRelation = "Building Table GOS".code where("code" = field("Building Code"));
         }
         field(3; "Code"; Code[20])
         {
             Caption = 'Code';
         }
-        field(5; "Floor"; text[50])
+        field(5; "Floor"; enum "floor")
         {
             Caption = 'Floor';
         }

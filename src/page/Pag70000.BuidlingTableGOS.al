@@ -13,7 +13,7 @@ page 70000 "Buidling Table GOS"
         {
             repeater(General)
             {
-                field(Code; Code)
+                field("code"; "code")
                 {
                     ApplicationArea = All;
                 }

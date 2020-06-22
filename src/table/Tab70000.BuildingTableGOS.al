@@ -13,10 +13,10 @@ table 70000 "Building Table GOS"
             tableRelation = Location;
 
         }
-        field(2; "Code"; code[20])
+        field(2; "code"; code[20])
         {
             caption = 'Code';
-            TableRelation = Location;
+
         }
         field(3; "Name"; Text[50])
         {
@@ -30,12 +30,13 @@ table 70000 "Building Table GOS"
         {
             Caption = 'GPS Coordinates';
         }
-        field(6; "No. of Rooms"; Code[10])
+        field(6; "No. of Rooms"; Integer)
         {
             caption = 'No. of Rooms';
 
             FieldClass = FlowField;
             Editable = false;
+            CalcFormula = Count ("Room Table GOS" WHERE("Building Code" = field("Code")));
             ///CalcFormula = lookup ()
 
 
