@@ -1,7 +1,7 @@
-table 70001 "Room Table GOS"
+table 70001 "Room GOS"
 
 {
-    Caption = 'Room table';
+    Caption = 'Room GOS';
     DataClassification = CustomerContent;
 
     fields
@@ -13,12 +13,12 @@ table 70001 "Room Table GOS"
         field(2; "Location Code"; code[10])
         {
             caption = 'Location Code';
-            TableRelation = "Building Table GOS".Location where(Location = field("Location Code")); // error looks like it is clasified as PK does not allow me to have more same location code ??
+            TableRelation = "Building GOS"."Location code" where("Location code" = field("Location code")); // error looks like it is clasified as PK does not allow me to have more same location code ??
         }
         field(3; "Building Code"; code[20])
         {
             Caption = 'Building Code';
-            TableRelation = "Building Table GOS".code where("code" = field("Building Code"));
+            TableRelation = "Building GOS".code where("code" = field("Building Code"));
         }
         field(4; "Floor"; enum "floor")
         {
@@ -32,6 +32,15 @@ table 70001 "Room Table GOS"
         {
             Caption = 'Capacity';
         }
+    }
+    keys
+    {
+
+        Key(Code; "Location code", "Building Code")
+        {
+            Clustered = true;
+        }
+
     }
 
 

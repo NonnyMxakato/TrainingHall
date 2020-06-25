@@ -1,26 +1,18 @@
-page 70003 "Course page"
+page 70003 "Course"
 {
-    
+
     ApplicationArea = All;
-    Caption = 'Course page';
+    Caption = 'Course';
     PageType = List;
-    SourceTable = "Course table";
+    SourceTable = "Course GOS";
     UsageCategory = Lists;
-    
+
     layout
     {
         area(content)
         {
             repeater(General)
             {
-                field(" Credits Avaliable"; " Credits Avaliable")
-                {
-                    ApplicationArea = All;
-                }
-                field("Search Terms"; "Search Terms")
-                {
-                    ApplicationArea = All;
-                }
                 field(Code; Code)
                 {
                     ApplicationArea = All;
@@ -29,6 +21,16 @@ page 70003 "Course page"
                 {
                     ApplicationArea = All;
                 }
+
+                field("Search Terms"; "Search Terms")
+                {
+                    ApplicationArea = All;
+                }
+                field(" Credits Avaliable"; " Credits Avaliable")
+                {
+                    ApplicationArea = All;
+                }
+
                 field(Duration; Duration)
                 {
                     ApplicationArea = All;
@@ -40,5 +42,5 @@ page 70003 "Course page"
             }
         }
     }
-    
+
 }

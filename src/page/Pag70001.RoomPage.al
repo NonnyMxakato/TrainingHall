@@ -1,10 +1,10 @@
-page 70001 "Room Page"
+page 70001 "Room"
 {
 
     ApplicationArea = All;
-    Caption = 'Room Page';
+    Caption = 'Room';
     PageType = List;
-    SourceTable = "Room Table GOS";
+    SourceTable = "Room GOS";
     UsageCategory = Lists;
 
     layout

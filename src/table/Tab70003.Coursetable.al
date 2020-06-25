@@ -1,6 +1,6 @@
-table 70003 "Course table"
+table 70003 "Course GOS"
 {
-    Caption = 'Course table';
+    Caption = 'Course GOS';
     DataClassification = CustomerContent;
 
     fields
@@ -21,11 +21,11 @@ table 70003 "Course table"
         {
             Caption = 'Search Terms';
         }
-        field(5; " Credits Avaliable"; Code[20]) //Should be integer
+        field(5; " Credits Avaliable"; Integer)
         {
             caption = 'Credits Avaliable';
         }
-        field(6; "Duration"; code[10]) //shouldn't link with degree field
+        field(6; "Duration"; Integer) //Numeric field
 
         {
             Caption = 'Duration';

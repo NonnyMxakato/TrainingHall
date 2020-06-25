@@ -1,10 +1,10 @@
-page 70000 "Buidling Table GOS"
+page 70000 "Buidling GOS"
 {
 
     ApplicationArea = All;
-    Caption = 'Buidling Table GOS';
+    Caption = 'Buidling GOS';
     PageType = List;
-    SourceTable = "Building Table GOS";
+    SourceTable = "Building GOS";
     UsageCategory = Lists;
 
     layout
@@ -23,7 +23,7 @@ page 70000 "Buidling Table GOS"
 
                 }
 
-                field(Location; Location)
+                field(Location; "Location code")
                 {
                     ApplicationArea = All;
                 }

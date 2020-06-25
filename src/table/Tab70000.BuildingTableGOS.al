@@ -2,14 +2,14 @@
 // Remember that object names and IDs should be unique across all extensions.
 // AL snippets start with t*, like tpageext - give them a try and happy coding!
 
-table 70000 "Building Table GOS"
+table 70000 "Building GOS"
 {
     //DataClassification = CustomerContent;
     fields
     {
-        field(1; "Location"; code[20])
+        field(1; "Location code"; code[20])
         {
-            caption = 'Location';
+            caption = 'Location code';
             tableRelation = Location;
 
         }
@@ -36,9 +36,9 @@ table 70000 "Building Table GOS"
 
             FieldClass = FlowField;
             Editable = false;
-            CalcFormula = Count ("Room Table GOS" WHERE("Building Code" = field("Code")));
-            ///CalcFormula = lookup ()
-
+            //caption = 'No of Rooms' ; // added a caption
+            CalcFormula = Count ("Room GOS" WHERE("Building Code" = field("Code"), "Location Code" = field("Location code")));
+            ///CalcFormula = count (Room where("Building code")
 
         }
 
@@ -47,7 +47,7 @@ table 70000 "Building Table GOS"
     Keys
     {
 
-        key(Key1; "Location", "Code")
+        key(Key1; "Location code", "Code")
         {
             Clustered = true;
         }

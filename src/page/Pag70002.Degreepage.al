@@ -1,12 +1,12 @@
-page 70002 "Degree page"
+page 70002 "Degree"
 {
-    
+
     ApplicationArea = All;
-    Caption = 'Degree page';
+    Caption = 'Degree';
     PageType = List;
-    SourceTable = "Degree Table";
+    SourceTable = "Degree GOS";
     UsageCategory = Lists;
-    
+
     layout
     {
         area(content)
@@ -28,5 +28,5 @@ page 70002 "Degree page"
             }
         }
     }
-    
+
 }

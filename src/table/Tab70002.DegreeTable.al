@@ -1,6 +1,6 @@
-table 70002 "Degree Table"
+table 70002 "Degree GOS"
 {
-    caption = 'Degree Table';
+    caption = 'Degree GOS';
     DataClassification = CustomerContent;
 
     fields
@@ -13,7 +13,7 @@ table 70002 "Degree Table"
         {
             Caption = 'Name';
         }
-        field(3; "Duration"; code[10])
+        field(3; "Duration"; Integer)
 
         {
             Caption = 'Duration';

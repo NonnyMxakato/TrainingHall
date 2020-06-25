@@ -1,29 +1,42 @@
-table 70004 "Module Table"
+table 70004 "Module GOS"
 {
-    Caption = 'Module Table';
+    Caption = 'Module GOS';
     DataClassification = CustomerContent;
 
     fields
     {
-        field(1; " Course Code"; code[20])
+        field(1; "Code"; code[20])
+        {
+            Caption = 'Code';
+        }
+        field(2; " Course Code"; code[20])
         {
             Caption = 'Course code';
-            TableRelation = "Course table";
+            TableRelation = "Course GOS";
 
         }
-        field(2; "Name"; text[20])
+
+        field(3; "Name"; text[20])
         {
             Caption = 'Name';
         }
-        field(3; "Description"; text[50])
+        field(4; "Description"; text[50])
         {
             Caption = 'Description';
         }
-        field(4; "Weight"; decimal) // %
+        field(5; "Weight"; decimal) // %
         {
             Caption = 'Weight';
         }
 
+
+    }
+    Keys
+    {
+        key(Code; " Course Code")
+        {
+            Clustered = true;
+        }
     }
 
 
